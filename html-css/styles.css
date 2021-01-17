@@ -1,14 +1,85 @@
-/* 
+body {
+    background-color: white;
+    margin: 0;
+}
 
-these are the colors used in the example
-***you can use them if you'd like or you can choose your own***
+header {
+    background-color: black;
+    height: 65px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
 
-black - rgb(37, 37, 37)
-blue - rgb(42, 171, 226)
-shadow - rgba(102, 75, 75, .3)
-white - rgb(255, 255, 255) (default value) 
+.logo {
+    color: rgb(32, 165, 226);
+    font-size: xx-large;
+    left: 20px
+}
 
-the font is called 'nunito' and can be found on google fonts
-***you can use it if you'd like or you can choose your own***
+nav {
+    color: white;
+    
+}
 
-*/
+section {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.container-1 {
+    width: 70%;
+    height: 60vh;
+    background-color: white;
+}
+
+.h2 {
+    font-size: medium;
+    
+}
+
+.side-container {
+    background-color: white;
+    width: 30%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img {
+    height: 150px;
+    width: 150px;
+}
+
+.side-container2 {
+    font-size: medium;
+    height: 50%;
+}
+
+.bottom-container {
+    background-color: white;
+    width: 100%;
+    height: 27vh;
+    
+}
+
+.img2 {
+    height: 100px;
+    width: 100px;
+}
+
+.h1 {
+    font-size: medium;
+}
+
+footer {
+    background-color: rgb(97, 192, 230);
+    height: 5vh;
+    display: flex;
+    align-items: center;
+}
+

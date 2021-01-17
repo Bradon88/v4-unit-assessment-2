@@ -8,7 +8,7 @@
     Call the array 'myArr'.
 */
 
-//CODE HERE
+const myArr = [4, 'abc', ['cat', 'dog', 'bird'], 77]
 
 
 ////////////////////PROBLEM 2////////////////////
@@ -20,7 +20,7 @@
 
 const nestedLetters = ['m', 'g', 'e', 'q', 'h', ['n', 'b', ['v', 'z', 'y', 'r']], 'a']
 
-//CODE HERE
+const foundZ = nestedLetters[1]
 
 
 ////////////////////PROBLEM 3////////////////////
@@ -36,7 +36,7 @@ const savannah = ['lion', 'zebra', 'lion', 'giraffe']
 const desert = ['rattlesnake', 'coyote']
 //DO NOT EDIT CODE ABOVE
 
-//CODE HERE
+const animals = [...forest, ...ocean, ...savannah, ...desert]
 
 
 /*
@@ -44,7 +44,8 @@ const desert = ['rattlesnake', 'coyote']
     Call the new array 'animalsCopy' and add 'elephant' onto the end of the array.
 */
 
-//CODE HERE
+const animalsCopy = [...animals]
+animalsCopy.push('elephant')
 
 
 ////////////////////PROBLEM 4////////////////////
@@ -55,7 +56,13 @@ const desert = ['rattlesnake', 'coyote']
     If the numbers are the same, just return the number.
 */
 
-//CODE HERE
+compareNums = (num1, num2) => {
+    if(num1 > num2){
+        return num1
+    } else{
+        return num2
+    }
+}
 
   
 ////////////////////PROBLEM 5////////////////////
@@ -67,7 +74,7 @@ const desert = ['rattlesnake', 'coyote']
     we would expect the function to return 'Sharknado is the best movie ever!'
 */
 
-//CODE HERE
+bestMovie = (movie) => movie + ' is the best movie ever!'
   
   
 ////////////////////PROBLEM 6////////////////////
@@ -75,7 +82,7 @@ const desert = ['rattlesnake', 'coyote']
     Write an arrow function called 'jsNinja' that returns the string: 'I am a JavaScript ninja!'
 */
 
-//CODE HERE
+jsNinja = () => 'I am a JavaScript ninja!'
   
 
 ////////////////////PROBLEM 7////////////////////
@@ -96,7 +103,7 @@ const desert = ['rattlesnake', 'coyote']
     delete the rating property off of the gameInfo object.
 */
 
-//CODE HERE
+delete gameInfo.rating
   
 
 ////////////////////PROBLEM 8////////////////////
@@ -118,7 +125,11 @@ const desert = ['rattlesnake', 'coyote']
     looping over the shapes object and deleting any property whose value is odd number.
 */
 
-//CODE HERE
+for (let key in shapes){
+    if(shapes[key] % 2 === 1){
+        delete shapes[key]
+    }
+}
   
   
 ////////////////////PROBLEM 9////////////////////
@@ -160,7 +171,11 @@ const classes = [
     all online classes with no homework.
 */
 
-//CODE HERE
+for (let key in classes){
+    if(classes[key] = true){
+        classes[key] = false
+    }
+}
 
   
 ////////////////////PROBLEM 10////////////////////
@@ -176,8 +191,10 @@ const lettersToPair = ['e', 'k', 's', 'a', 'e', 's', 'a', 'n', 'k', 'n']
 let pairsArray = []
 //DO NOT EDIT CODE ABOVE
 
-//CODE HERE
 
+// for (let i = 0; i < lettersToPair.length; i++) {
+//     for (let j = 0; j < lettersToPair.length; j++) {
+//       pairsArray.push([i, j])
     
 
 //////////////////////////////////PROBLEMS 11-14//////////////////////////////////
@@ -193,7 +210,12 @@ let pairsArray = []
     Those values should come from the functions parameters: name, age, breed, tricks (in order).
 */
 
-//CODE HERE
+function Dog(name, age, breed, tricks) {
+    this.name = name
+    this.age = age
+    this.breed = breed
+    this.tricks = tricks
+}
 
 
 /*
@@ -202,7 +224,7 @@ let pairsArray = []
     Store the result in a variable called 'fido'.
 */
 
-//CODE HERE
+const fido = new Dog('Fido', 3, 'Jack Russell', ['sit', 'shake'])
   
 
 ////////////////////PROBLEM 12////////////////////
@@ -212,7 +234,11 @@ let pairsArray = []
     NAME will come from that context, so you should reference 'this.name' to get the correct name.
 */
 
-//CODE HERE
+function bark(){
+    return this.name + ' says bark'
+}
+
+bark.this.name.call(fido, 'Fido')
 
 
 /*
@@ -220,8 +246,8 @@ let pairsArray = []
     and saving the result to a variable called fidoSpeak.
 */
 
-//CODE HERE
-  
+bark.this.name.call(fido, 'Fido')
+  const fidoSpeak = this.name
   
 ////////////////////PROBLEM 13////////////////////
 /*
@@ -231,7 +257,10 @@ let pairsArray = []
     Tricks will come from that context, so you should reference 'this.tricks' to access the correct array.
 */
 
-//CODE HERE
+function teachTrick(trick){
+    this.tricks.push(trick)
+    return trick
+}
 
 
 /*
@@ -239,7 +268,7 @@ let pairsArray = []
     Save the result to a variable called 'teachStay'.
 */
 
-//CODE HERE
+const teachStay = teachTrick.bind(fido, 'stay')
   
   
 ////////////////////PROBLEM 14////////////////////
@@ -250,8 +279,10 @@ let pairsArray = []
     Remember to use the 'this' keyword to access values from the context that you will apply.
 */
 
-//CODE HERE
-
+function dogIntro(treat, toy){
+    return this.name + ' is a ' + this.breed + ' that loves ' + treat + ' and their ' + toy + '!'
+}
+dogIntro.fido.apply()
 
 /*
     Invoke the apply method on dogIntro, passing in fido as the context 
@@ -259,7 +290,7 @@ let pairsArray = []
     and save the result to a variable called fidoIntro.
 */
 
-//CODE HERE
+
   
 
 ////////////////////PROBLEM 15////////////////////
@@ -269,7 +300,13 @@ let pairsArray = []
     Those values should come from the function's parameters: brand, model, storage, color, sold (in order).
 */
 
-//CODE HERE
+function Phone(brand, model, storage, color, sold){
+    this.brand = brand
+    this.model = model
+    this.storage = storage
+    this.color = color
+    this.sold = sold
+}
 
   
 /*
@@ -283,8 +320,15 @@ let pairsArray = []
     - sold, this should be false for each phone
 */
 
-//CODE HERE
-  // let phone1 = 
+
+  let phone1 = {
+      brand: 'samsung',
+      model: 'T2',
+      storage: 3,
+      color: 'black',
+      sold: false
+
+  } 
   
   // let phone2 = 
   
